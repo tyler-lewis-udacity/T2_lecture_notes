@@ -1,0 +1,16 @@
+{
+    // Build and run in Sublime console
+    "shell_cmd": "g++ *.cpp -o \"${file_path}/${file_base_name}.out\" && \"${file_path}/${file_base_name}.out\"",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "working_dir": "${file_path}",
+    "selector": "source.c, source.c++",
+
+    // Build and run in a terminal
+    "variants":
+    [
+        {
+            "name": "Terminal",
+            "shell_cmd": "g++ *.cpp -o \"${file_path}/${file_base_name}.out\" && open -a Terminal.app \"${file_path}/${file_base_name}.out\""
+        }
+    ]
+}
